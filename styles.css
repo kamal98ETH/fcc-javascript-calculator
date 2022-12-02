@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C2C2D6;
+}
+
+#calculator {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#clickables {
+    height: 330px;
+    display: grid;
+    grid-template-areas:
+        'clear clear divide multiply'
+        'seven eight nine subtract'
+        'four five six  add'
+        'one two three equals'
+        'zero zero decimal equals';
+}
+
+
+#display,
+#output {
+    min-height: 30px;
+    width: 330px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Seven Segment', sans-serif;
+}
+
+#display {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+#output {
+    color: #FFA500;
+    display: flex;
+    flex-direction: column;
+}
+
+#output div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#clear {
+    grid-area: clear;
+    background-color: #AC3939;
+}
+
+#divide {
+    grid-area: divide;
+    background-color: #666666;
+}
+
+#multiply {
+    grid-area: multiply;
+    background-color: #666666;
+}
+
+#seven {
+    grid-area: seven;
+    background-color: #4D4D4D;
+}
+
+#eight {
+    grid-area: eight;
+    background-color: #4D4D4D;
+}
+
+#nine {
+    grid-area: nine;
+    background-color: #4D4D4D;
+}
+
+#subtract {
+    grid-area: subtract;
+    background-color: #666666;
+}
+
+#four {
+    grid-area: four;
+    background-color: #4D4D4D;
+}
+
+#five {
+    grid-area: five;
+    background-color: #4D4D4D;
+}
+
+#six {
+    grid-area: six;
+    background-color: #4D4D4D;
+}
+
+#add {
+    grid-area: add;
+    background-color: #666666;
+}
+
+#one {
+    grid-area: one;
+    background-color: #4D4D4D;
+}
+
+#two {
+    grid-area: two;
+    background-color: #4D4D4D;
+}
+
+#three {
+    grid-area: three;
+    background-color: #4D4D4D;
+}
+
+#equals {
+    grid-area: equals;
+    background-color: #004466;
+}
+
+#zero {
+    grid-area: zero;
+    background-color: #4D4D4D;
+}
+
+#decimal {
+    grid-area: decimal;
+    background-color: #4D4D4D;
+}
+
+.clickable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    user-select: none;
+}
+
+.clickable:hover {
+    border: 1px solid gray;
+    color: black;
+}
